@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>master-photo demo</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/master-photo/dist/masterphoto.css">
+    <!-- 引入组件库 -->
+    <script src="https://cdn.jsdelivr.net/npm/master-photo/dist/masterphoto.umd.min.js"></script>
+    <style type="text/css">
+        html,body{
+            height: 100%;
+            margin: 0;
+        }
+        #app{
+            height: 100%;
+            width: 100%;
+        }
+    .align-center {
+        text-align: center;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <m-view>
+            <template v-slot:header>
+                <m-viewbar class="align-center">
+                    <m-zoomin></m-zoomin>
+                    <m-zoomnum></m-zoomnum>
+                    <m-zoomout></m-zoomout>
+                    <m-fitcenter></m-fitcenter>
+                    <m-rotate direction="left"></m-rotate>
+                    <m-rotate direction="right"></m-rotate>
+                </m-viewbar>
+            </template>
+            <template v-slot:footer>
+                <m-toolbar class="align-center">
+                    <template v-slot:begin></template>
+                </m-toolbar>
+            </template>
+        </m-view>
+    </div>
+</body>
+<script>
+new Vue({
+    el: '#app',
+    data: function() {
+        return {}
+    }
+})
+</script>
+
+</html>
