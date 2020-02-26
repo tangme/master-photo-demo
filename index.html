@@ -4,20 +4,21 @@
 <head>
     <meta charset="utf-8">
     <title>master-photo demo</title>
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
     <!-- 引入样式 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/master-photo/dist/masterphoto.css">
     <!-- 引入组件库 -->
     <script src="https://cdn.jsdelivr.net/npm/master-photo/dist/masterphoto.umd.min.js"></script>
     <style type="text/css">
-        html,body{
-            height: 100%;
-            margin: 0;
-        }
-        #app{
-            height: 100%;
-            width: 100%;
-        }
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+    }
+    #app {
+        height: 100%;
+        width: 100%;
+    }
     .align-center {
         text-align: center;
     }
@@ -39,7 +40,14 @@
             </template>
             <template v-slot:footer>
                 <m-toolbar class="align-center">
-                    <template v-slot:begin></template>
+                    <m-rect-tool></m-rect-tool>
+                    <m-ellipse-tool></m-ellipse-tool>
+                    <m-arrowline-tool></m-arrowline-tool>
+                    <m-pencil-tool></m-pencil-tool>
+                    <m-mosaic-tool></m-mosaic-tool>
+                    <m-text-tool></m-text-tool>
+                    <m-undo-tool></m-undo-tool>
+                    <m-file-tool></m-file-tool>
                 </m-toolbar>
             </template>
         </m-view>
