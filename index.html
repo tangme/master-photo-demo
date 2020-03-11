@@ -15,12 +15,10 @@
         height: 100%;
         margin: 0;
     }
+
     #app {
         height: 100%;
         width: 100%;
-    }
-    .align-center {
-        text-align: center;
     }
     </style>
 </head>
@@ -28,8 +26,11 @@
 <body>
     <div id="app">
         <m-view>
+            <template v-slot:side>
+                <m-filter></m-filter>
+            </template>
             <template v-slot:header>
-                <m-viewbar class="align-center">
+                <m-viewbar>
                     <m-zoomin></m-zoomin>
                     <m-zoomnum></m-zoomnum>
                     <m-zoomout></m-zoomout>
@@ -39,7 +40,7 @@
                 </m-viewbar>
             </template>
             <template v-slot:footer>
-                <m-toolbar class="align-center">
+                <m-toolbar>
                     <m-rect-tool></m-rect-tool>
                     <m-ellipse-tool></m-ellipse-tool>
                     <m-arrowline-tool></m-arrowline-tool>
@@ -47,6 +48,8 @@
                     <m-mosaic-tool></m-mosaic-tool>
                     <m-text-tool></m-text-tool>
                     <m-undo-tool></m-undo-tool>
+                    <m-redo-tool></m-redo-tool>
+                    <m-clear-tool></m-clear-tool>
                     <m-file-tool></m-file-tool>
                 </m-toolbar>
             </template>
